@@ -8,41 +8,48 @@
 </head>
 <body>
 
-    <header class="p-2" style="background-color: blueviolet;">
+    <div class="wrap">
+        <header class="p-2" style="background-color: blueviolet;">
+            <h1>CodeQuiz!</h1>
 
-        <strong>HI-SCORES LEADERBOARD</strong>
-        <span id="time"></span>
+            <strong>HI-SCORES LEADERBOARD</strong>
+            <span id="time"></span>
 
-    </header>
+        </header>
 
 
-    <!--Main Menu-->
-    <div id="homepage">
+        <!--Main Menu-->
+        <div id="homepage" class="home">
+            <h2>Rules</h2>
+            <p>
+            You will proceed to answer a series of questions revolving around 
+            programming and web development. Try to answer as many as you can 
+            under the given time. Keep in mind that wrong answers will remove 
+            some of your given quiz time. Good luck!
+            </p>
+            <br>
+            <button id="startQuiz">startQuiz!</button>
+        </div>
+
+        <!--Quiz-->
+
+        <div id="quiz" class="hide">
+            <h4 id='question-title'></h4>
+            <div id='choices' class="choices"></div>
+
+        </div>
+
+
+        <!--Submit Score-->
+        <div id="submit-score">
+
+        </div>
+        
+        <div id="hi-score">
+
+        </div>
 
     </div>
-
-    <!--Quiz-->
-    <div id="quiz">
-        <ul>
-            <li class="ans">a.</li>
-            <li class="ansSelect">b.</li>
-            <li class="ansSelect">c.</li>
-            <li class="ansSelect">d.</li>
-        </ul>
-
-    </div>
-
-
-    <!--Submit Score-->
-    <div id="submit-score">
-
-    </div>
-    
-    <div id="hi-score">
-
-    </div>
-
-
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
