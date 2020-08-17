@@ -53,7 +53,7 @@ function showScore() {
 // calls the function to set the timer
 
 function startQuiz() {
-   var homepageEl = document.getElementById('class','home');
+   var homepageEl = document.getElementById('homepage');
    homepage.setAttribute("class", "hide");
    questionEl.removeAttribute("class");
 
@@ -115,6 +115,8 @@ function pullQuestion() {
       choiceNode.textContent = i+1+". "+ choice;
 
       choiceNode.onclick = clickedChoice;
+      choices.appendChild(choiceNode);
+
 
    });
 
