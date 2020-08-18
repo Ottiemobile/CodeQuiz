@@ -1,6 +1,6 @@
 
 //creates varables
-var start = document.getElementById("start");
+var start = document.getElementById("startQuiz");
 var questionEl = document.getElementById("question");
 var submit = document.querySelector("button.submit");
 var time = document.getElementById("time");
@@ -12,7 +12,7 @@ var submitScore = document.querySelector("#submitScore");
 var questionNum = 0;
 var ans;
 var timerId;
-
+console.log(questions[0].ans);
 
 function timer(){
    remainingTime--;
@@ -73,7 +73,7 @@ function stopQuiz() {
 
 // creates the action when clicking on an answer
 function clickedChoice() {
- if(this.value !== question[questionNum].answer){
+ if(this.value !== questions[questionNum].ans){
    remainingTime -= 5;
 
    if (remainingTime < 0) {
@@ -103,7 +103,9 @@ function pullQuestion() {
 
    // shows question's title
    var QtsEl = document.getElementById("question-title");
-   QtsEl = textContent = newQuestion.title;
+   console.log(QtsEl);
+   QtsEl.textContent = questions[questionNum].title;
+
 
    ansSelect.innerHTML = ""; // clears out old questions
 
@@ -150,4 +152,4 @@ function pullQuestion() {
 //   alert('You got ' + score + '/' + questions.length);
 // when timer runs outgit add .
 
-start.onclick = startQuiz();
+start.addEventListener("click", startQuiz);
