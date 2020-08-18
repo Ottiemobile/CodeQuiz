@@ -6,7 +6,7 @@ var submit = document.querySelector("button.submit");
 var time = document.getElementById("time");
 var remainingTime = (questions.length * 20 + 1);
 var userName;
-var ansSelect = document.getElementById("ans");
+var ansSelect = document.getElementById("choices");
 var userScore = document.getElementById("userScore");
 var submitScore = document.querySelector("#submitScore");
 var questionNum = 0;
@@ -59,7 +59,7 @@ function startQuiz() {
 
    timerId = setInterval(timer, 5000);
 
-   timerEl.textContent = remainingTime;
+   time.textContent = remainingTime;
 
    pullQuestion();
 
@@ -107,7 +107,7 @@ function pullQuestion() {
 
    ansSelect.innerHTML = ""; // clears out old questions
 
-   questionNum.choices.array.forEach(function(choice, i){
+   newQuestion.choices.forEach(function(choice, i){
       var choiceNode = document.createElement("button");
       choiceNode.setAttribute("class", "choices");
       choiceNode.setAttribute("value", choices);
@@ -148,7 +148,6 @@ function pullQuestion() {
 
 //   // Show total at end
 //   alert('You got ' + score + '/' + questions.length);
-// when timer runs out
-stopQuiz
+// when timer runs outgit add .
 
 start.onclick = startQuiz();
